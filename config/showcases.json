@@ -405,5 +405,23 @@
       "sha256": "2a7bbddd35a3cbb65caed54e1c2b681de59e9060adb7a966201d2bf496ccdac7",
       "sourceSha": "00880db13b70649f75710b0e0d754c9db1d82e8b"
     }
+  },
+  {
+    "slug": "little-me-shop",
+    "name": "Little Me｜小個子衣櫥",
+    "category": "服飾商城前端測試版",
+    "repository": "xk2022/xk-shop-little-me",
+    "ref": "b9a3a9f9e5d286b1d2b9c4387152424caca8aad2",
+    "framework": "next",
+    "indexable": false,
+    "brand": "Little Me",
+    "purpose": "逛新品、看試穿與尺寸表，選色選碼後體驗購物袋與模擬結帳。",
+    "env": {
+      "NEXT_PUBLIC_SHOP_DEMO": "1"
+    },
+    "releaseGate": {
+      "workflow": ".github/workflows/check.yml",
+      "job": "storefront"
+    }
   }
 ]
