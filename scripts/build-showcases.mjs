@@ -74,10 +74,11 @@ try {
           logisticsDemo,
         });
       } else {
-        run('npm', ['ci'], dir, sourceEnvironment);
-        run('npm', ['run', 'build'], dir, sourceEnvironment);
-        await validateExport(join(dir, 'out'), s);
-        await cp(join(dir, 'out'), target, { recursive: true });
+        const project = s.repository === 'xk2022/xk-shop-little-me' ? join(dir, 'frontend') : dir;
+        run('npm', ['ci'], project, sourceEnvironment);
+        run('npm', ['run', 'build'], project, sourceEnvironment);
+        await validateExport(join(project, 'out'), s);
+        await cp(join(project, 'out'), target, { recursive: true });
         if (s.listed !== false) await capturePreview(staging, `/${s.slug}/`, join(target, '_showcase-preview.jpg'));
       }
     }
